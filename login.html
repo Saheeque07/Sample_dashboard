@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Login</h2>
+        <form method="POST">
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                <input type="text" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="username" name="username" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" id="password" name="password" required>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-lg">Login</button>
+            <p class="mt-4 text-sm text-gray-600">Don't have an account? <a href="{{ url_for('signup') }}" class="text-blue-500 hover:underline">Sign Up</a></p>
+        </form>
+    </div>
+{% endblock %}

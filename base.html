@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS -->
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-6">
+            <a href="#" class="text-xl font-bold text-gray-800">Dashboard</a>
+            <div class="float-right">
+                <a href="{{ url_for('logout') }}" class="text-gray-600 hover:text-gray-800">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-6 mt-8">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
